@@ -4,9 +4,10 @@
 Funcionalidade: Tela de Cadastro
 
   Esquema do Cenario: Realizar cadastro de usuários
-    Quando o usuário preencher os dados <nome>, <nome_da_empresa>, <pais>, <endereco>, <cidade>, <pais_opcional>, <cep>, <telefone>, <email>
+    Dado que usuário esteja na tela de "Cadastro"
+    Quando o usuário preencher os dados requeridos <nome>, <nome_da_empresa>, <pais>, <endereco>, <cidade>, <pais_opcional>, <cep>, <telefone>, <email>
     E o endereço de <email> deve ser válido
-    Então deve válidar se os campos requeridos estão preenchidos
+    Então deve válidar se os campos requeridos estão preenchidos, caso contrário deve mostrar a mensagem de alerta
 
     Exemplos:
       | nome   | nome_da_empresa | pais   | endereco  | cidade | pais_opcional | cep       | telefone       | email            |

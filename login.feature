@@ -4,8 +4,10 @@
 Funcionalidade: Login na Plataforma
 
   Esquema do Cenario: Realizar login
-    Quando inserir <login> e <senha> o usuário deve ser redirecionado para a tela de checkout
-    E se os dados forem inválidos deve mostrar a mensagem <mensagem_erro_login>
+    Dado que o usuário esteja na tela de "Login"
+    Quando inserir <login> e <senha> 
+    E for redirecionado para a tele de "Checkout"
+    Então deve validar o login, caso contrário deve mostrar a mensagem <mensagem_erro_login>
 
     Exemplos:
       | login             | senha | mensagem_erro_login        |
